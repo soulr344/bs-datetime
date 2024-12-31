@@ -1,0 +1,17 @@
+{
+  "name": "bs-datetime",
+  "description": "A performant, zero-dependency date conversion library for Gregorian date to Vikram Sambat date conversion and vice-versa.",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build:lib": "tsup index.ts --format cjs,esm --dts",
+    "lint": "tsc"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  }
+}

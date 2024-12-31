@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "lib": ["ESNext"],
+    "module": "commonjs",
+    "noEmit": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "skipLibCheck": true
+  }
+}
