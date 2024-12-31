@@ -310,6 +310,12 @@ class NepaliDate implements INepaliDate {
       .padStart(3, "0")}`;
   }
 
+  format(pattern: string): string {
+    return pattern.replaceAll(/|/, (match) => {
+      return "";
+    });
+  }
+
   get [Symbol.toStringTag]() {
     return this.toString();
   }

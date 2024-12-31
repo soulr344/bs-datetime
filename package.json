@@ -7,7 +7,7 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build:lib": "tsup index.ts --format cjs,esm --dts",
+    "build:lib": "tsup index.ts --format cjs,esm --dts --minify",
     "lint": "tsc"
   },
   "devDependencies": {
