@@ -457,4 +457,98 @@ const YEARS = [...MAPPINGS.keys()].map((i) => +i).sort((a, b) => a - b);
 const MAX_YEAR = YEARS.at(-1)!;
 const MIN_YEAR = YEARS.at(0)!;
 
-export { MAPPINGS, YEARS, MAX_YEAR, MIN_YEAR, PAD_MAP };
+const CALENDAR_LABELS = {
+  months: {
+    en: {
+      full: [
+        "Baisakh",
+        "Jestha",
+        "Asar",
+        "Shrawan",
+        "Bhadra",
+        "Aswin",
+        "Kartik",
+        "Mangsir",
+        "Poush",
+        "Magh",
+        "Falgun",
+        "Chaitra",
+      ],
+      short: [
+        "Bai",
+        "Jes",
+        "Asa",
+        "Shr",
+        "Bhd",
+        "Asw",
+        "Kar",
+        "Man",
+        "Pou",
+        "Mag",
+        "Fal",
+        "Cha",
+      ],
+    },
+    np: {
+      full: [
+        "बैशाख",
+        "जेठ",
+        "असार",
+        "श्रावण",
+        "भाद्र",
+        "आश्विन",
+        "कार्तिक",
+        "मंसिर",
+        "पौष",
+        "माघ",
+        "फाल्गुण",
+        "चैत्र",
+      ],
+      short: [
+        "बै",
+        "जे",
+        "अ",
+        "श्रा",
+        "भा",
+        "आ",
+        "का",
+        "मं",
+        "पौ",
+        "मा",
+        "फा",
+        "चै",
+      ],
+    },
+  },
+  weekdays: {
+    en: {
+      full: [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ],
+      short: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+    },
+    np: {
+      full: [
+        "आइतबार",
+        "सोमबार",
+        "मंगलबार",
+        "बुधबार",
+        "बिहिबार",
+        "शुक्रबार",
+        "शनिबार",
+      ],
+      short: ["आइत", "सोम", "मंगल", "बुध", "बिहि", "शुक्र", "शनि"],
+    },
+  },
+  numbers: {
+    np: ["०", "१", "२", "३", "४", "५", "६", "७", "८", "९"],
+  },
+};
+
+export { MAPPINGS, YEARS, MAX_YEAR, MIN_YEAR, PAD_MAP, CALENDAR_LABELS };
