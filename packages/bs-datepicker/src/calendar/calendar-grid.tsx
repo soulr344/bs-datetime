@@ -332,6 +332,23 @@ export default function CalendarGrid({
     }
   }, [currentTabbableButton]);
 
+  React.useLayoutEffect(() => {
+    if (focusChangeRef.current) return;
+
+    if (
+      selectedDate?.getMonth() === currentViewerDate.getMonth() &&
+      selectedDate.getFullYear() === currentViewerDate.getFullYear()
+    ) {
+      const start = getStartDay(currentViewerDate, weekend);
+
+      setCurrentTabbableButton(start + selectedDate.getDate() - 1);
+    } else {
+      const start = getStartDay(currentViewerDate, weekend);
+
+      setCurrentTabbableButton(start);
+    }
+  }, [currentViewerDate]);
+
   return (
     <table
       className="text-xs gap-1 w-full mt-3 text-center"
