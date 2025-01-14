@@ -326,13 +326,6 @@ export default function CalendarGrid({
   };
 
   React.useLayoutEffect(() => {
-    if (focusChangeRef.current) {
-      btnRef.current[currentTabbableButton]?.focus();
-      focusChangeRef.current = false;
-    }
-  }, [currentTabbableButton]);
-
-  React.useLayoutEffect(() => {
     if (focusChangeRef.current) return;
 
     if (
@@ -348,6 +341,13 @@ export default function CalendarGrid({
       setCurrentTabbableButton(start);
     }
   }, [currentViewerDate]);
+
+  React.useLayoutEffect(() => {
+    if (focusChangeRef.current) {
+      btnRef.current[currentTabbableButton]?.focus();
+      focusChangeRef.current = false;
+    }
+  }, [currentTabbableButton]);
 
   return (
     <table
