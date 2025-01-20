@@ -28,6 +28,24 @@ class NepaliDate implements INepaliDate {
   static MAX_YEAR = MAX_YEAR;
   static MIN_YEAR = MIN_YEAR;
 
+  static now() {
+    return Date.now();
+  }
+
+  static UTC(
+    ...props: [
+      year: number,
+      monthIndex: number,
+      date?: number,
+      hours?: number,
+      minutes?: number,
+      seconds?: number,
+      ms?: number,
+    ]
+  ) {
+    return Date.UTC(...props);
+  }
+
   static #convertToBS = (date: Date) => {
     /**
      * Start with the assumption that the correct year is given date's year + 57
